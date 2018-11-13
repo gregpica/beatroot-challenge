@@ -18,6 +18,9 @@ require 'vcr'
 VCR.configure do |c|
   c.cassette_library_dir = 'fixtures/.cassettes'
   c.hook_into :webmock
+  c.default_cassette_options = {
+    re_record_interval: 60 * 30
+  }
 end
 
 RSpec.configure do |config|

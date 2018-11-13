@@ -1,7 +1,7 @@
 class BeatRootService
   BASE_URL = "https://sync-api.beatroot.com"
 
-  def initialze(params)
+  def initialize(params)
     @account = params[:account]
     @token = params[:token]
   end
