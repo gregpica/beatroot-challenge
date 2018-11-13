@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sync-api.beatroot.com/accounts/beatroot-records/tracks/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin17.3.0 x86_64) ruby/2.3.3p222
+      Authorization:
+      - Token token=aa140833-6a6e-4304-bf3f-833cb963bdc5
+      Host:
+      - sync-api.beatroot.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 13 Nov 2018 22:04:03 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Request-Id:
+      - c889d6dc-de4c-41e7-a092-2870720bbda0
+      X-Runtime:
+      - '0.199792'
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"track":{"id":2,"title":"Sweet Lorraine","full_title":"Sweet Lorraine
+        (live at the O2)","subtitle":"live at the O2","mix_version":null,"searchable":true,"recording_token":null,"recording_file_name":null,"recording_custom_file_name":null,"bit_rate":null,"channels":null,"sample_rate":null,"codec":null,"duration":202,"created_at":"2018-06-27T18:57:14.169Z","updated_at":"2018-06-27T19:21:55.720Z","waveform":null,"sentiment":"neutral","musical_work_type":"track","inherit_parent_track_data":true,"playlists_count":0,"releases_count":1,"preview_start":null,"preview_duration":null,"url_token":"1a58ce9b-376b-4efe-ae7c-bb83f34f1590","explicit":true,"parental_warning":"not_explicit","assign_isrc":false,"isrc":"GBG3H1000203","iswc":null,"prs_tunecode":null,"catalogue_number":null,"recording_territory":null,"recording_date":null,"publishing_territory":null,"publishing_date":null,"commissioning_territory":null,"key":"
+        ","audio_rights":null,"one_stop_license":null,"rigths_public_notes":null,"bpm":0,"intensity":0,"lyrics":null,"notes":null,"comments":null,"cover":false,"represented_recording_rights":null,"represented_publishing_rights":null,"artist":{"id":8,"writer":false,"name":"Tony
+        Crombie feat. Robert Robertson","key_name":null,"image_token":null,"image_colours":null,"tracks_count":1,"searchable":true,"created_at":"2018-06-27T19:01:21.004Z","updated_at":"2018-06-27T19:22:36.259Z","image_crop_x":0,"image_crop_y":0,"image_crop_width":0},"web_transcoding":null,"parent_track":null,"transcodings":[],"tag":{"id":1124,"primary":true,"score":100,"name":"Dance","classification":"genre"},"key_release":null,"covered":null,"variations":[],"publishers":[],"record_labels":[{"id":1,"territories":["AO","BF","BI","BJ","BW","CD","CF","CG","CI","CM","CV","DJ","DZ","EG","EH","ER","ET","GA","GH","GM","GN","GQ","GW","KE","KM","LR","LS","LY","MA","MG","ML","MR","MU","MW","MZ","NA","NE","NG","RE","RW","SC","SD","SH","SL","SN","SO","SS","ST","SZ","TD","TG","TN","TZ","UG","YT","ZA","ZM","ZW","AQ","BV","GS","HM","TF","AE","AF","AM","AZ","BD","BH","BN","BT","CC","CN","CX","HK","ID","IL","IN","IO","IQ","IR","JO","JP","KG","KH","KP","KR","KW","KZ","LA","LB","LK","MM","MN","MO","MV","MY","NP","OM","PH","PK","PS","QA","SA","SG","SY","TH","TJ","TL","TM","TR","TW","UZ","VN","YE","AD","AL","AT","AX","BA","BE","BG","BY","CH","CY","CZ","DE","DK","EE","ES","FI","FO","FR","GB","GE","GG","GI","GR","HR","HU","IE","IM","IS","IT","JE","LI","LT","LU","LV","MC","MD","ME","MK","MT","NL","NO","PL","PT","RO","RS","RU","SE","SI","SJ","SK","SM","UA","VA","AG","AI","AW","BB","BL","BM","BQ","BS","BZ","CA","CR","CU","CW","DM","DO","GD","GL","GP","GT","HN","HT","JM","KN","KY","LC","MF","MQ","MS","MX","NI","PA","PM","PR","SV","SX","TC","TT","US","VC","VG","VI","AS","AU","CK","FJ","FM","GU","KI","MH","MP","NC","NF","NR","NU","NZ","PF","PG","PN","PW","SB","TK","TO","TV","UM","VU","WF","WS","AR","BO","BR","CL","CO","EC","FK","GF","GY","PE","PY","SR","UY","VE"],"start_date":null,"end_date":null,"contract_type":null,"c_line":null,"p_line":"2010
+        Harrison James Music","name":"Harrison James Music","imprint":null}],"deals":[],"writers":[],"contributors":[{"id":1,"name":"Tony
+        Crombie","direct":true,"roles":["Artist"],"pro":null,"pro_number":null},{"id":2,"name":"Robert
+        Robertson","direct":true,"roles":["FeaturedArtist"],"pro":null,"pro_number":null},{"id":3,"name":"Bill
+        Wallis","direct":true,"roles":["Mixer"],"pro":null,"pro_number":null},{"id":4,"name":"Anna
+        Watson","direct":true,"roles":["Producer"],"pro":null,"pro_number":null},{"id":5,"name":"June
+        Blane","direct":false,"roles":["Composer"],"pro":null,"pro_number":null},{"id":6,"name":"Marty
+        Ford","direct":false,"roles":["Lyricist"],"pro":null,"pro_number":null},{"id":7,"name":"Philip
+        Pike","direct":false,"roles":["Lyricist"],"pro":null,"pro_number":null}],"tags":[{"id":1124,"primary":true,"score":100,"name":"Dance","classification":"genre"},{"id":2045,"primary":false,"score":50,"name":"Tech
+        House","classification":"genre"}]}}'
+    http_version: 
+  recorded_at: Tue, 13 Nov 2018 22:04:04 GMT
+recorded_with: VCR 4.0.0
