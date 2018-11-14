@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 13 Nov 2018 22:10:29 GMT
+      - Wed, 14 Nov 2018 02:41:26 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -39,9 +39,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       X-Request-Id:
-      - e9ec4d75-d9dd-43a9-8e69-2b469b6f832c
+      - 4937603a-0688-4935-8c2f-fc04929e8e30
       X-Runtime:
-      - '0.935034'
+      - '0.551227'
       Strict-Transport-Security:
       - max-age=31536000
       Vary:
@@ -84,5 +84,5 @@ http_interactions:
         Days (feat. Jess Glynne, Macklemore \u0026 Dan Caplen)","subtitle":null,"mix_version":null,"searchable":true,"recording_token":"73723359-41ea-40c3-a531-0f378d1459aa","recording_file_name":"7d7c020d-ec8c-40bd-a246-0a6c0bdb1c8e","recording_custom_file_name":null,"bit_rate":96,"channels":2,"sample_rate":44100,"codec":"mp3","duration":30,"created_at":"2018-06-27T19:47:04.929Z","updated_at":"2018-06-28T10:07:10.251Z","waveform":[93,100,99,96,95,96,97,98,100,98,92,100,99,97,100,99,97,100,100,96,89,100,87,83,89,55,40,100,94,78,100,100,100,100,100,98,87,100,100,97,99,100,97,99,100,93,95,100,98,92,86,80,79,100,98,90,98,100,100,100,100,91,95,100,99,97,99,100,96,100,99,95,90,100,98,83,100,100,89,100,100,100,99,100,100,100,100,97,86,100,100,100,100,100,100,100,100,100,100,100,97,90,97,93,92,100,100,100,100,100,100,98,100,100,97,100,99,95,100,100,96,96,95,88,91,100,99,49,95,41,66,100,100,99,99,99,100,98,100,100,95,100,100,100,100,100,100,98,100,96,98,100,100,99,100,98,95,100,100,100,100,100,100,100,100,99,97,100,100,92,100,99,98,100,99,92,100,100,66,45,97,77,73,100,100,98,100,98,100,100,100,94,96,100,100,100,100,98,99,100,100,99,100,100,99,97,100,99,98,100,100,100,100,100,100,100,100,100,100,100,100,95,100,100,100,100,97,96,100,100,71,100,82,79,100,100,100,100,100,100,98,100,100,100,100,100,100,100,100,99,98,100,98,95,100,100,100,100,100,100,100,100,100,100,100,100,99,100,100,100,100,100,98,100,100,98,96,100,97,92,100,99,57,100,100,97,100,100,100,98,100,100,100,100,100,87,100,100,100,100,53],"sentiment":"positive","musical_work_type":"track","inherit_parent_track_data":true,"playlists_count":0,"releases_count":0,"preview_start":null,"preview_duration":null,"url_token":"4342ada4-712b-4900-81f6-a28233cd672a","key":"
         ","bpm":93,"intensity":48,"artist":{"id":18,"writer":false,"name":"Rudimental","key_name":null,"image_token":"1a7e31dc-3337-473f-8b21-df34590ab2f3","image_colours":["1c1e21","aab2b8","7d868b","413632","020304","555a5d","080b11","0d2245"],"tracks_count":1,"searchable":true,"created_at":"2018-06-27T19:46:55.426Z","updated_at":"2018-06-28T10:07:10.318Z","image_crop_x":0,"image_crop_y":0,"image_crop_width":0},"web_transcoding":{"id":31,"codec":"mp4","bit_rate":128,"sample_rate":44100,"file_token":"27fcf9fb-5940-428a-b208-11b08577d6d6","for_web":true},"parent_track":null,"transcodings":[{"id":31,"codec":"mp4","bit_rate":128,"sample_rate":44100,"file_token":"27fcf9fb-5940-428a-b208-11b08577d6d6","for_web":true},{"id":32,"codec":"mp3","bit_rate":320,"sample_rate":44100,"file_token":"b5cbe5cb-8ee8-49b3-bf98-412c582e7dce","for_web":false},{"id":33,"codec":"wav","bit_rate":1411,"sample_rate":48000,"file_token":"423de72f-d26c-4f35-a574-2475a0ecf590","for_web":false}],"tag":{"id":1124,"primary":false,"score":100,"name":"Dance","classification":"genre"},"key_release":null,"variations":[]}],"meta":{"pagination":{"current_page":1,"next_page":null,"prev_page":null,"total_pages":1,"total_count":13}}}'
     http_version: 
-  recorded_at: Tue, 13 Nov 2018 22:10:29 GMT
+  recorded_at: Wed, 14 Nov 2018 02:41:27 GMT
 recorded_with: VCR 4.0.0
