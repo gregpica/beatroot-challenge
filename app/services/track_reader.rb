@@ -24,7 +24,7 @@ class TrackReader
   end
 
   def parsed_title
-    @track["full_title"]
+    @track["title"]
   end
 
   def parsed_subtitle
@@ -60,7 +60,7 @@ class TrackReader
   end
 
   def parsed_p_line
-    create_p_line_hash(@track["record_labels"]["p_line"]) if @track["record_labels"].present?
+    create_p_line_hash(@track["record_labels"].first["p_line"]) if @track["record_labels"].present?
   end
 
   def parsed_genres
