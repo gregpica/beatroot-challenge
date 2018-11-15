@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 15 Nov 2018 08:03:38 GMT
+      - Thu, 15 Nov 2018 18:48:56 GMT
       Connection:
       - keep-alive
       X-Frame-Options:
@@ -39,9 +39,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       X-Request-Id:
-      - 3b0f9789-d71d-4052-9fdd-c5d316af6d61
+      - add300f7-2947-4b9f-a571-a249beae85d7
       X-Runtime:
-      - '0.219627'
+      - '0.203305'
       Strict-Transport-Security:
       - max-age=31536000
       Vary:
@@ -66,5 +66,5 @@ http_interactions:
         Pike","direct":false,"roles":["Lyricist"],"pro":null,"pro_number":null}],"tags":[{"id":1124,"primary":true,"score":100,"name":"Dance","classification":"genre"},{"id":2045,"primary":false,"score":50,"name":"Tech
         House","classification":"genre"}]}}'
     http_version: 
-  recorded_at: Thu, 15 Nov 2018 08:03:38 GMT
+  recorded_at: Thu, 15 Nov 2018 18:48:56 GMT
 recorded_with: VCR 4.0.0

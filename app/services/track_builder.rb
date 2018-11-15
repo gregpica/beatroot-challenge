@@ -37,8 +37,8 @@ class TrackBuilder
     @track.indirect_contributors = indirect_contributors
   end
 
-  def set_record_label_names(record_label_names)
-    @track.record_label_names = record_label_names
+  def set_record_label_name(record_label_name)
+    @track.record_label_name = record_label_name
   end
 
   def set_p_line(p_line)
@@ -56,4 +56,4 @@ class TrackBuilder
   def track
     @track
   end
-end 
+end

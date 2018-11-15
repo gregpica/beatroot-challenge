@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe TrackReader do
   describe "#construct" do
-      json =  {
+    json =  {
       "title" => "Sweet Lorraine",
       "subtitle" => "live at the O2",
       "duration" => 202,
@@ -51,7 +51,8 @@ RSpec.describe TrackReader do
         }
       ]
     }
-    let(:track) { TrackReader.new(json).construct }
+
+    track =  TrackReader.new(json).construct
 
     context "it returns a Track instance with parsed properties" do
 

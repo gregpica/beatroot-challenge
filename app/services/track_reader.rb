@@ -12,7 +12,7 @@ class TrackReader
       builder.set_artist_name(parsed_artist_name)
       builder.set_direct_contributors(parsed_direct_contributors)
       builder.set_indirect_contributors(parsed_indirect_contributors)
-      builder.set_record_label_names(parsed_record_label_names)
+      builder.set_record_label_name(parsed_record_label_name)
       builder.set_p_line(parsed_p_line)
       builder.set_genres(parsed_genres)
       builder.set_parental_warning_type(parsed_parental_warning_type)
@@ -53,10 +53,8 @@ class TrackReader
     end
   end
 
-  def parsed_record_label_names
-    if @track["record_labels"].present?
-      @track["record_labels"].map { |record_label| record_label["name"] }
-    end
+  def parsed_record_label_name
+    @track["record_labels"].first["name"] if @track["record_labels"].present?
   end
 
   def parsed_p_line
