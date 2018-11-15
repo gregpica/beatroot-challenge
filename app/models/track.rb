@@ -7,7 +7,7 @@ class Track
      :artist_name,
      :direct_contributors,
      :indirect_contributors,
-     :record_label_names,
+     :record_label_name,
      :p_line,
      :genres,
      :parental_warning_type
