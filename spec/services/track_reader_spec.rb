@@ -6,7 +6,7 @@ RSpec.describe TrackReader do
       "title" => "Sweet Lorraine",
       "subtitle" => "live at the O2",
       "duration" => 202,
-      "parental_warning" => "not_explicit",
+      "explicit" => true,
       "isrc" => "GBG3H1000203",
       "artist" => {
         "name" => "Tony Crombie feat. Robert Robertson",
@@ -48,13 +48,16 @@ RSpec.describe TrackReader do
         {
           "name" => "Tech House",
           "classification" => "genre"
+        },
+        {
+          "name" => "Not genre",
+          "classification" => "Not genre"
         }
       ]
     }
 
-    track =  TrackReader.new(json).construct
-
     context "it returns a Track instance with parsed properties" do
+      track =  TrackReader.new(json).construct
 
       it "sets a parsed isrc" do
         expect(track.isrc).to eq("GBG3H1000203")
@@ -98,6 +101,32 @@ RSpec.describe TrackReader do
           }
         ]
         expect(track.indirect_contributors).to eq(parsed_indirect_contributors)
+      end
+
+      it "sets parsed record_label_name" do
+        expect(track.record_label_name).to eq("Harrison James Music")
+      end
+
+      it "sets parsed p_line" do
+        parsed_p_line = {
+          year: "2010",
+          text: "2010 Harrison James Music"
+        }
+        expect(track.p_line).to eq(parsed_p_line)
+      end
+
+      it "sets parsed genres" do
+        expect(track.genres).to eq(["Dance", "Tech House"])
+      end
+
+      it "sets parsed parental_warning_type when explicit" do
+        expect(track.parental_warning_type).to eq("Explicit")
+      end
+
+      it "sets parsed parental_warning_type when not explicit" do
+        not_explicit_json = { "explicit" => false }
+        not_explicit_track = TrackReader.new(not_explicit_json).construct
+        expect(not_explicit_track.parental_warning_type).to eq("NotExplicit")
       end
     end
   end

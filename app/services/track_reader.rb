@@ -32,11 +32,11 @@ class TrackReader
   end
 
   def parsed_duration
-    Time.at(@track["duration"]).gmtime.strftime("PT%HH%MM%SS")
+    Time.at(@track["duration"]).gmtime.strftime("PT%HH%MM%SS") if @track["duration"]
   end
 
   def parsed_artist_name
-    @track["artist"]["name"]
+    @track["artist"]["name"] if @track["artist"]
   end
 
   def parsed_direct_contributors
@@ -68,7 +68,7 @@ class TrackReader
   end
 
   def parsed_parental_warning_type
-    @track["parental_warning"].split("_").map(&:capitalize).join if @track["parental_warning"]
+    @track["explicit"] ? "Explicit" : "NotExplicit" if @track["explicit"] != nil 
   end
 
   private
