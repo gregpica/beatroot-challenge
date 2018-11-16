@@ -7,7 +7,7 @@ class TrackXmlConverter
   end
 
   def convert
-    builder = Nokogiri::XML::Builder.new do |xml|
+    builder = Nokogiri::XML::Builder.new(:encoding => 'UTF-8') do |xml|
       set_xml(xml)
       xml.Track {
         isrc_xml
@@ -22,7 +22,7 @@ class TrackXmlConverter
         parental_warning_type_xml
       }
     end
-    puts builder.to_xml
+    a = builder.to_xml
   end
 
   private
@@ -39,19 +39,15 @@ class TrackXmlConverter
      @xml.ReferenceTitle {
         title_text_xml
         subtitle_xml
-     } if a_title_exists
+     } if @track.title
   end
 
   def title_text_xml
-    @xml.TitleText @track.title if @track.title
+    @xml.TitleText @track.title
   end
 
   def subtitle_xml
-    @xml.SubTitle @track.subtitle if @track.subtitle
-  end
-
-  def a_title_exists
-    @track.title || @track.subtitle
+    @xml.SubTitle @track.subtitle
   end
 
   def duration_xml
@@ -109,5 +105,5 @@ class TrackXmlConverter
 
   def parental_warning_type_xml
     @xml.ParentalWarningType @track.parental_warning_type if @track.parental_warning_type
-  end 
+  end
 end

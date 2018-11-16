@@ -78,9 +78,13 @@ class TrackReader
     contributors.map do |contributor|
       {
        name: contributor["name"],
-       roles: contributor["roles"]
+       roles: parse_roles(contributor["roles"])
       }
     end
+  end
+
+  def parse_roles(roles)
+    roles.map{|role| role.gsub("Featured","")}
   end
 
   def create_p_line_hash(p_line)
