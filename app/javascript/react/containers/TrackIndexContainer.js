@@ -1,5 +1,6 @@
 import React from 'react';
 import trackClient from '../clients/track';
+import TrackIndexTile from '../components/TrackIndexTile';
 
 class TrackIndexContainer extends React.Component {
   constructor(props){
@@ -7,6 +8,8 @@ class TrackIndexContainer extends React.Component {
     this.state = {
       tracks: []
     }
+    
+    this.getTrackIndexTiles = this.getTrackIndexTiles.bind(this);
   }
 
   componentDidMount() {
@@ -20,9 +23,20 @@ class TrackIndexContainer extends React.Component {
       .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
+  getTrackIndexTiles() {
+    return this.state.tracks.map(track => {
+      return <TrackIndexTile
+        key={track.id}
+        id={track.id}
+        title={track.full_title}
+        artist={track.artist.name}
+      />
+    })
+  }
+
   render() {
     return(
-      <div>"Welcome to the TrackIndexContainer"</div>
+      <div>{this.getTrackIndexTiles()}</div>
     )
   }
 }
