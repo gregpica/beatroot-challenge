@@ -9,7 +9,8 @@ class TrackIndexContainer extends React.Component {
     this.state = {
       tracks: []
     }
-    
+
+    this.getTrackIndexTiles = this.getTrackIndexTiles.bind(this);
     this.downloadXml = this.downloadXml.bind(this);
   }
 
