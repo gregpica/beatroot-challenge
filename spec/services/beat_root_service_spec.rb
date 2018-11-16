@@ -13,11 +13,12 @@ describe BeatRootService, :vcr => true do
   end
 
   describe "#get_track" do
-    it "returns a track" do
+    it "returns a track by id" do
       VCR.use_cassette('beat_root_get_track_cassette') do
         client = BeatRootService.new({account: ENV['BEATROOT_ACCOUNT'], token: ENV['BEATROOT_TOKEN']})
         response = JSON.parse(client.get_track(2))
         expect(response["track"]).to be_an_instance_of(Hash)
+        expect(response["track"]["id"]).to eq(2)
      end
     end
   end
