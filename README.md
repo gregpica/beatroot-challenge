@@ -1,25 +1,18 @@
 # README
+This program was developed with Ruby on Rails and React.js. A Builder Design
+Pattern and service objects were utilized to keep the Tracks API Controller as thin as possible. The 'nokogiri' gem was used to build XML documents. Tested using RSpec.
+Blob objects and 'file-saver' were used in React to accomplish the XML file
+download. Responsive design with Foundation.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+$ bundle install
+$ rails s
 
-Things you may want to cover:
+In separate terminal tab/window:
+$ yarn install
+$ yarn start
 
-* Ruby version
+Navigate to http://localhost:3000/
 
-* System dependencies
+To run test suite: $ bundle exec rspec
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# beatroot-challenge
+![Alt text](./app/assets/images/screenshot.jpg?raw=true)
