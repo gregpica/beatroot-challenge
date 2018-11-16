@@ -8,7 +8,7 @@ class TrackIndexContainer extends React.Component {
     this.state = {
       tracks: []
     }
-    
+
     this.getTrackIndexTiles = this.getTrackIndexTiles.bind(this);
   }
 
@@ -36,7 +36,12 @@ class TrackIndexContainer extends React.Component {
 
   render() {
     return(
-      <div>{this.getTrackIndexTiles()}</div>
+      <div>
+        <div className="text-center">
+          <h1>BeatRoot Track XML Downloader</h1>
+        </div>
+        <div>{this.getTrackIndexTiles()}</div>
+      </div>
     )
   }
 }

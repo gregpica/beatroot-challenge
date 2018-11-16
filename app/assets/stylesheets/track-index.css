@@ -1,0 +1,7 @@
+.tile {
+  padding: 1em;
+  background: #a5c5f7;
+  opacity: .8;
+  font-weight: bold;
+  box-shadow: 1px 2px 3px rgba(72, 72, 72, 30);
+}
