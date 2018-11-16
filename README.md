@@ -5,10 +5,13 @@ Blob objects and 'file-saver' were used in React to accomplish the XML file
 download. Responsive design with Foundation.
 
 $ bundle install
+
 $ rails s
 
 In separate terminal tab/window:
+
 $ yarn install
+
 $ yarn start
 
 Navigate to http://localhost:3000/
