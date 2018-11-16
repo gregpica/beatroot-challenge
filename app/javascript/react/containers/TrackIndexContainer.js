@@ -1,6 +1,7 @@
 import React from 'react';
 import trackClient from '../clients/track';
 import TrackIndexTile from '../components/TrackIndexTile';
+import FileSaver from 'file-saver';
 
 class TrackIndexContainer extends React.Component {
   constructor(props){
@@ -8,8 +9,8 @@ class TrackIndexContainer extends React.Component {
     this.state = {
       tracks: []
     }
-
-    this.getTrackIndexTiles = this.getTrackIndexTiles.bind(this);
+    
+    this.downloadXml = this.downloadXml.bind(this);
   }
 
   componentDidMount() {
@@ -23,13 +24,23 @@ class TrackIndexContainer extends React.Component {
       .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
+  downloadXml(id) {
+    trackClient.getTrackXml(id)
+      .then(response => response.text())
+      .then(xmlString => {
+        return new Blob([xmlString], {type : 'application/xml'})
+      })
+      .then(blob => FileSaver.saveAs(blob, `track_${id}.xml`))
+      .catch(error => console.error(`Error in fetch: ${error.message}`));
+  }
+
   getTrackIndexTiles() {
     return this.state.tracks.map(track => {
       return <TrackIndexTile
         key={track.id}
-        id={track.id}
         title={track.full_title}
         artist={track.artist.name}
+        downloadXml={() => this.downloadXml(track.id)}
       />
     })
   }
