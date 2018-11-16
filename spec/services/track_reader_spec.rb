@@ -87,7 +87,7 @@ RSpec.describe TrackReader do
           },
           {
             name: "Robert Robertson",
-            roles: ["FeaturedArtist"]
+            roles: ["Artist"]
           }
         ]
         expect(track.direct_contributors).to eq(parsed_direct_contributors)

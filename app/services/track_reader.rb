@@ -42,14 +42,14 @@ class TrackReader
   def parsed_direct_contributors
     if @track["contributors"].present?
       direct_contributors = @track["contributors"].select{ |contributor| contributor["direct"] == true}
-      create_contributor_hashes(direct_contributors)
+      create_contributor_hashes(direct_contributors) if direct_contributors.present?
     end
   end
 
   def parsed_indirect_contributors
     if @track["contributors"].present?
       indirect_contributors = @track["contributors"].select{ |contributor| contributor["direct"] == false}
-      create_contributor_hashes(indirect_contributors)
+      create_contributor_hashes(indirect_contributors) if indirect_contributors.present?
     end
   end
 
@@ -63,12 +63,13 @@ class TrackReader
 
   def parsed_genres
     if @track["tags"].present?
-      @track["tags"].select{ |tag| tag["classification"] == "genre"}.map{ |tag| tag["name"]}
+      genre_tags = @track["tags"].select{ |tag| tag["classification"] == "genre"}
+      genre_tags.map{ |tag| tag["name"]} if genre_tags.present?
     end
   end
 
   def parsed_parental_warning_type
-    @track["explicit"] ? "Explicit" : "NotExplicit" if @track["explicit"] != nil 
+    @track["explicit"] ? "Explicit" : "NotExplicit" if @track["explicit"] != nil
   end
 
   private
@@ -77,9 +78,13 @@ class TrackReader
     contributors.map do |contributor|
       {
        name: contributor["name"],
-       roles: contributor["roles"]
+       roles: parse_roles(contributor["roles"])
       }
     end
+  end
+
+  def parse_roles(roles)
+    roles.map{|role| role.gsub("Featured","")}
   end
 
   def create_p_line_hash(p_line)
